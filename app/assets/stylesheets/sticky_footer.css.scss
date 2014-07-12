@@ -28,8 +28,13 @@ nav + .container-fluid {
 
 footer > div {
 	padding-top: $footer-height / 3;
+	padding-bottom: $footer-height / 10;
 	background-color: $navbar-default-bg;
 	border-top-color: $navbar-default-border;
 	border-top-width: 1px;
 	border-top-style: solid;
+}
+
+.flag {
+	height: $footer-height / 4;
 }

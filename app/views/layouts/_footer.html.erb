@@ -7,7 +7,7 @@
 		  <p>Links</p>
 	  </div>
 	  <div class="col-xs-12 col-sm-4">
-		  <p>Language</p>
+		  <%= link_to "<img src='/flag_#{@flag}.png' class='flag' />".html_safe, url_for(:only_path => false, :locale => @flag) %>
 	  </div>
   </div>
 </footer>

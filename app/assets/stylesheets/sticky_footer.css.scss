@@ -1,0 +1,31 @@
+@import "bootstrap/_variables";
+
+/* Sticky footer styles
+ * -------------------------------------------------- */
+
+$footer-height: 60px;
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin-bottom: $footer-height;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: $footer-height;
+	background-color: $navbar-default-bg;
+	padding-top: $footer-height / 3;
+	border-top-color: $navbar-default-border;
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+
+nav + .container-fluid {
+	padding-bottom: $footer-height;
+}

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :transactions
   resources :post_recorded_transactions
   resources :accounts

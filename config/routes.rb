@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :users
   resources :categories
   resources :currencies
+
+  get 'static/home'
+  root :to => 'static#home'
 end

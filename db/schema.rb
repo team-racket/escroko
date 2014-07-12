@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140712124901) do
+ActiveRecord::Schema.define(version: 20140712133924) do
 
   create_table "accounts", force: true do |t|
     t.integer  "user_id"
@@ -61,7 +61,6 @@ ActiveRecord::Schema.define(version: 20140712124901) do
     t.float    "default_amount"
     t.text     "commentary"
     t.integer  "category_id"
-    t.string   "type"
     t.date     "start_date"
     t.date     "end_date"
     t.integer  "day"
@@ -79,7 +78,6 @@ ActiveRecord::Schema.define(version: 20140712124901) do
     t.integer  "category_id"
     t.integer  "post_recorded_transaction_id"
     t.text     "commentary"
-    t.string   "type"
     t.float    "amount"
     t.date     "date"
     t.datetime "created_at"

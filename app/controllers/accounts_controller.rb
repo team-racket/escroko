@@ -10,6 +10,10 @@ class AccountsController < ApplicationController
   # GET /accounts/1
   # GET /accounts/1.json
   def show
+    @balance = @account.default_amount
+    @account.transactions.each do |t|
+      @balance += t.amount
+    end
   end
 
   # GET /accounts/new

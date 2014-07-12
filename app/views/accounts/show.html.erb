@@ -2,12 +2,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @account.user %>
+  <%= @account.user.first_name %> <%= @account.user.last_name %>
 </p>
 
 <p>
   <strong>Currency:</strong>
-  <%= @account.currency %>
+  <%= @account.currency.label %>
 </p>
 
 <p>
@@ -17,13 +17,40 @@
 
 <p>
   <strong>Default amount:</strong>
-  <%= @account.default_amount %>
+  <%= @account.default_amount %> <%= @account.currency.symbol %>
 </p>
 
 <p>
   <strong>Default account:</strong>
   <%= @account.default_account %>
 </p>
+
+<p>
+  <strong>Balance:</strong>
+  <%= @balance %> <%= @account.currency.symbol %>
+</p>
+
+<% if !@account.transactions.empty? %>
+<p>
+  <strong>Transactions:</strong>
+  <table>
+    <thead>
+  	  <th>Label</th>
+	  <th>Category</th>
+  	  <th>Amount</th>
+    </thead>
+    <tbody>
+	  <% @account.transactions.each do |t| %>
+		<tr>
+		  <td><%= link_to t.commentary, t %></td>
+		  <td bgcolor="<%= t.category.color %>"><%= link_to t.category.label, t.category %></td>
+		  <td bgcolor="<%= t.amount > 0 ? 'green' : 'red' %>"><%= "#{t.amount} #{@account.currency.symbol}" %>
+		</tr>
+	<% end %>
+	</tbody>
+  </table>
+<% end%>
+
 
 <%= link_to 'Edit', edit_account_path(@account) %> |
 <%= link_to 'Back', accounts_path %>

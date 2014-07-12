@@ -14,18 +14,22 @@ body {
 	margin-bottom: $footer-height;
 }
 
-.footer {
+footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 	height: $footer-height;
-	background-color: $navbar-default-bg;
-	padding-top: $footer-height / 3;
-	border-top-color: $navbar-default-border;
-	border-top-width: 1px;
-	border-top-style: solid;
+	text-align: center;
 }
 
 nav + .container-fluid {
 	padding-bottom: $footer-height;
+}
+
+footer > div {
+	padding-top: $footer-height / 3;
+	background-color: $navbar-default-bg;
+	border-top-color: $navbar-default-border;
+	border-top-width: 1px;
+	border-top-style: solid;
 }

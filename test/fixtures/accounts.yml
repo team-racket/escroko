@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  currency_id: 
+  label: MyString
+  default_amount: 1.5
+  default_account: false
+
+two:
+  user_id: 
+  currency_id: 
+  label: MyString
+  default_amount: 1.5
+  default_account: false

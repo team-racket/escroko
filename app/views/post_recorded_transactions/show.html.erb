@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Label:</strong>
+  <%= @post_recorded_transaction.label %>
+</p>
+
+<p>
+  <strong>Default amount:</strong>
+  <%= @post_recorded_transaction.default_amount %>
+</p>
+
+<p>
+  <strong>Commentary:</strong>
+  <%= @post_recorded_transaction.commentary %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @post_recorded_transaction.category %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @post_recorded_transaction.type %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @post_recorded_transaction.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @post_recorded_transaction.end_date %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @post_recorded_transaction.day %>
+</p>
+
+<p>
+  <strong>To validate:</strong>
+  <%= @post_recorded_transaction.to_validate %>
+</p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @post_recorded_transaction.account %>
+</p>
+
+<%= link_to 'Edit', edit_post_recorded_transaction_path(@post_recorded_transaction) %> |
+<%= link_to 'Back', post_recorded_transactions_path %>

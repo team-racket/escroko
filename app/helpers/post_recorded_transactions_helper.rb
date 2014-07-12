@@ -1,0 +1,2 @@
+module PostRecordedTransactionsHelper
+end

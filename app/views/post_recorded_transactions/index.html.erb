@@ -1,0 +1,43 @@
+<h1>Listing post_recorded_transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Label</th>
+      <th>Default amount</th>
+      <th>Commentary</th>
+      <th>Category</th>
+      <th>Type</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Day</th>
+      <th>To validate</th>
+      <th>Account</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @post_recorded_transactions.each do |post_recorded_transaction| %>
+      <tr>
+        <td><%= post_recorded_transaction.label %></td>
+        <td><%= post_recorded_transaction.default_amount %></td>
+        <td><%= post_recorded_transaction.commentary %></td>
+        <td><%= post_recorded_transaction.category %></td>
+        <td><%= post_recorded_transaction.type %></td>
+        <td><%= post_recorded_transaction.start_date %></td>
+        <td><%= post_recorded_transaction.end_date %></td>
+        <td><%= post_recorded_transaction.day %></td>
+        <td><%= post_recorded_transaction.to_validate %></td>
+        <td><%= post_recorded_transaction.account %></td>
+        <td><%= link_to 'Show', post_recorded_transaction %></td>
+        <td><%= link_to 'Edit', edit_post_recorded_transaction_path(post_recorded_transaction) %></td>
+        <td><%= link_to 'Destroy', post_recorded_transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post recorded transaction', new_post_recorded_transaction_path %>

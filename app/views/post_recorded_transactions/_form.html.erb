@@ -1,0 +1,57 @@
+<%= form_for(@post_recorded_transaction) do |f| %>
+  <% if @post_recorded_transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post_recorded_transaction.errors.count, "error") %> prohibited this post_recorded_transaction from being saved:</h2>
+
+      <ul>
+      <% @post_recorded_transaction.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :label %><br>
+    <%= f.text_field :label %>
+  </div>
+  <div class="field">
+    <%= f.label :default_amount %><br>
+    <%= f.text_field :default_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :commentary %><br>
+    <%= f.text_area :commentary %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br>
+    <%= f.text_field :category_id %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br>
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br>
+    <%= f.number_field :day %>
+  </div>
+  <div class="field">
+    <%= f.label :to_validate %><br>
+    <%= f.check_box :to_validate %>
+  </div>
+  <div class="field">
+    <%= f.label :account_id %><br>
+    <%= f.text_field :account_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

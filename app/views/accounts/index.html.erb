@@ -1,0 +1,33 @@
+<h1>Listing accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Currency</th>
+      <th>Label</th>
+      <th>Default amount</th>
+      <th>Default account</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><%= account.user %></td>
+        <td><%= account.currency %></td>
+        <td><%= account.label %></td>
+        <td><%= account.default_amount %></td>
+        <td><%= account.default_account %></td>
+        <td><%= link_to 'Show', account %></td>
+        <td><%= link_to 'Edit', edit_account_path(account) %></td>
+        <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Account', new_account_path %>

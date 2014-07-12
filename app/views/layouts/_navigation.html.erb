@@ -14,15 +14,15 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li <%= "class='active'".html_safe if controller.controller_name.eql?('accounts') %>><%= link_to "Accounts", accounts_path %></li>
+              <%= link_to_controller "accounts", "Accounts" %>
 			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
 				<% if user_signed_in? %>
 					<li><%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %></li>
 				<% else %>
-					<li <%= "class='active'".html_safe if url_for(:only_path => true).eql?(new_user_registration_path) %>><%= link_to "Sign up", new_user_registration_path %></li>
-					<li <%= "class='active'".html_safe if url_for(:only_path => true).eql?(new_user_session_path) %>><%= link_to "Sign in", new_user_session_path %></li>
+                  <%= link_to_path new_user_registration_path, "Sign up" %>
+                  <%= link_to_path new_user_session_path, "Sign in" %>
 				<% end %>
 			</ul>
 

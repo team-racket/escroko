@@ -18,7 +18,7 @@ class PostRecordedTransactionsControllerTest < ActionController::TestCase
 
   test "should create post_recorded_transaction" do
     assert_difference('PostRecordedTransaction.count') do
-      post :create, post_recorded_transaction: { account_id: @post_recorded_transaction.account_id, category_id: @post_recorded_transaction.category_id, commentary: @post_recorded_transaction.commentary, day: @post_recorded_transaction.day, default_amount: @post_recorded_transaction.default_amount, end_date: @post_recorded_transaction.end_date, label: @post_recorded_transaction.label, start_date: @post_recorded_transaction.start_date, to_validate: @post_recorded_transaction.to_validate, type: @post_recorded_transaction.type }
+      post :create, post_recorded_transaction: { account_id: @post_recorded_transaction.account_id, category_id: @post_recorded_transaction.category_id, commentary: @post_recorded_transaction.commentary, day: @post_recorded_transaction.day, default_amount: @post_recorded_transaction.default_amount, end_date: @post_recorded_transaction.end_date, label: @post_recorded_transaction.label, start_date: @post_recorded_transaction.start_date, to_validate: @post_recorded_transaction.to_validate }
     end
 
     assert_redirected_to post_recorded_transaction_path(assigns(:post_recorded_transaction))
@@ -35,7 +35,7 @@ class PostRecordedTransactionsControllerTest < ActionController::TestCase
   end
 
   test "should update post_recorded_transaction" do
-    patch :update, id: @post_recorded_transaction, post_recorded_transaction: { account_id: @post_recorded_transaction.account_id, category_id: @post_recorded_transaction.category_id, commentary: @post_recorded_transaction.commentary, day: @post_recorded_transaction.day, default_amount: @post_recorded_transaction.default_amount, end_date: @post_recorded_transaction.end_date, label: @post_recorded_transaction.label, start_date: @post_recorded_transaction.start_date, to_validate: @post_recorded_transaction.to_validate, type: @post_recorded_transaction.type }
+    patch :update, id: @post_recorded_transaction, post_recorded_transaction: { account_id: @post_recorded_transaction.account_id, category_id: @post_recorded_transaction.category_id, commentary: @post_recorded_transaction.commentary, day: @post_recorded_transaction.day, default_amount: @post_recorded_transaction.default_amount, end_date: @post_recorded_transaction.end_date, label: @post_recorded_transaction.label, start_date: @post_recorded_transaction.start_date, to_validate: @post_recorded_transaction.to_validate }
     assert_redirected_to post_recorded_transaction_path(assigns(:post_recorded_transaction))
   end
 

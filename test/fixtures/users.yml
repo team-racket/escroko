@@ -1,15 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  password: MyString
-  currency_id: 
+  first_name: Mickaël
+  last_name: Coulombel
+  email: mickael.coulombel@escroko.com
+  currency_id: 1
 
 two:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  password: MyString
-  currency_id: 
+  first_name: Morgan
+  last_name: Moulet
+  email: morgan.moulet@escroko.com
+  currency_id: 2

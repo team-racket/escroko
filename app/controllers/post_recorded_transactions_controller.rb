@@ -1,5 +1,6 @@
 class PostRecordedTransactionsController < ApplicationController
   before_action :set_post_recorded_transaction, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /post_recorded_transactions
   # GET /post_recorded_transactions.json
